@@ -131,4 +131,5 @@ resource "aws_instance" "km_vm" {
   tags = merge(var.default_tags, {
     Name = "km_vm_${var.environment}"
   })
+  monitoring = true
 }
