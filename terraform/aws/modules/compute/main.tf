@@ -132,4 +132,9 @@ resource "aws_instance" "km_vm" {
     Name = "km_vm_${var.environment}"
   })
   monitoring = true
+
+  metadata_options {
+    http_endpoint = "disabled"
+    http_tokens   = "required"
+  }
 }
